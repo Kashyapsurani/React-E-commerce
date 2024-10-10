@@ -1,0 +1,272 @@
+/* Universal box-sizing for better control over layout */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.main2 {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.main2:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.images {
+    width: 150px;
+    height: 100px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.names {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.prices {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #666;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.count button {
+    width: 35px;
+    height: 35px;
+    background-color: #8a67f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(138, 103, 247, 0.3);
+}
+
+.count button:hover {
+    background-color: #7a5ee0;
+    box-shadow: 0 6px 12px rgba(138, 103, 247, 0.4);
+}
+
+/* Coupon Section */
+.coupon-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.coupon-section input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.coupon-section button {
+    padding: 10px 20px;
+    background-color: #8a67f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 300px;
+    transition: background-color 0.3s ease;
+}
+
+.coupon-section button:hover {
+    background-color: #7a5ee0;
+}
+
+/* Subtotal Section */
+.subTotle {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.HegingTotle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.myTotle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.p {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 30px;
+    text-align: right;
+}
+
+.Font {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+            color: black;
+}
+
+.Font>b {
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .images {
+        width: 120px;
+        height: 80px;
+    }
+
+    .names,
+    .prices {
+        font-size: 1.1rem;
+    }
+
+    .count button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .myTotle {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .warpeer {
+        width: 95%;
+    }
+
+    .main2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .images {
+        margin-bottom: 15px;
+        width: 100px;
+        height: 70px;
+    }
+
+    .names,
+    .prices {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .coupon-section {
+        flex-direction: column;
+    }
+
+    .coupon-section input {
+        margin-bottom: 10px;
+        width: 250px;
+    }
+
+    .coupon-section button {
+        width: 250px;
+    }
+
+    .myTotle {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .count button {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .Font {
+        font-size: 1rem;
+    }
+
+    .main2 {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .images {
+        width: 80px;
+        height: 60px;
+    }
+
+    .names,
+    .prices {
+        font-size: 0.9rem;
+    }
+
+    .coupon-section input,
+    .coupon-section button {
+        width: 100%;
+    }
+
+    .subTotle {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}

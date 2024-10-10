@@ -1,0 +1,175 @@
+/* Card.css */
+.mains {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 50px;
+    cursor: pointer;
+    /* Change cursor to pointer for clickable cards */
+    object-fit: cover;
+}
+
+.mains:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container and image hover effect */
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+.img img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.img:hover img {
+    transform: scale(1.05);
+    /* Slightly enlarge image on hover */
+}
+
+/* Favorite button */
+.favorite-btn {
+    position: absolute;
+    top: -1.5px;
+    left: -1.5px;
+    background-color: rgba(138, 103, 247, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+}
+
+.favorite-btn:hover {
+    background-color: white;
+    color: rgba(138, 103, 247, 1);
+    /* Change text color on hover */
+}
+
+.favorite-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.favorite-btn:hover svg {
+    transform: scale(1.1);
+    /* Slightly enlarge icon on hover */
+}
+
+/* Data section styles */
+.data {
+    padding: 20px;
+}
+
+.h1 h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.h1 h1:hover {
+    color: #8a67f7;
+    /* Light purple hover effect */
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+/* Add to cart button */
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.add-to-cart button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8a67f7;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(138, 103, 247, 0.3);
+}
+
+.add-to-cart button:hover {
+    background-color: #7a5ee0;
+    box-shadow: 0 6px 15px rgba(138, 103, 247, 0.4);
+}
+
+.add-to-cart button:active {
+    transform: scale(0.98);
+    /* Slightly shrink the button on click */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .mains {
+        width: 90%;
+        /* Make the card responsive on smaller screens */
+    }
+
+    /* Adjust image height for smaller screens */
+    .img {
+        height: 150px;
+    }
+
+    /* Make the favorite button smaller on mobile */
+    .favorite-btn {
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        left: 0px;
+    }
+
+    /* Reduce card title font size on mobile */
+    .h1 h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust price font size */
+    .price {
+        font-size: 1.2rem;
+    }
+
+    /* Make add to cart button padding smaller */
+    .add-to-cart button {
+        padding: 12px;
+    }
+}

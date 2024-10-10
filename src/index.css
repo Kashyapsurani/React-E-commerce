@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    margin: 0;
+    background-color: #eee;
+}
+
+.warpeer {
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: monospace;
+    border-radius: 8px;
+}

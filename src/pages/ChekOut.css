@@ -1,0 +1,256 @@
+/* Main container */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    width: 90%;
+}
+
+/* Section styles for user and payment information */
+.payment-section,
+.user-details-section {
+    width: 40%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    resize: vertical;
+    /* Allows resizing vertically only */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Input field focus style */
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p[style="color: green"] {
+    color: green;
+}
+
+.SubTotle {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MyTotle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.P {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 30px;
+    text-align: right;
+}
+
+.font {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.font>b {
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+
+/* Tablet view and below */
+@media (max-width: 768px) {
+
+    .payment-section,
+    .user-details-section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .checkout-container {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* Adjust form layout to stack vertically */
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    /* Adjust button and input width */
+    input,
+    button,
+    textarea {
+        width: 100%;
+    }
+
+    /* Reduce font size for smaller screens */
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .font {
+        font-size: 1rem;
+    }
+
+    .SubTotle {
+        font-size: 1.3rem;
+    }
+
+    .MyTotle {
+        margin-top: 5px;
+    }
+}
+
+/* Mobile view and below */
+@media (max-width: 480px) {
+
+    .payment-section,
+    .user-details-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .checkout-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Adjust form layout to stack vertically */
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    /* Adjust button and input width */
+    input,
+    button,
+    textarea {
+        width: 100%;
+    }
+
+    /* Reduce font size for smaller screens */
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .font {
+        font-size: 0.9rem;
+    }
+
+    .SubTotle {
+        font-size: 1.2rem;
+    }
+}
