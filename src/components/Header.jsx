@@ -17,7 +17,7 @@ function Header() {
         <div className="nav-wrapper">
             <div className="logo-container">
                 <Link to="/" className="logo">
-                    <img src="https://img.freepik.com/premium-vector/burger-chips-drink-background_1128391-15020.jpg" alt="Hangaama Food Logo" className="logoimage" />
+                    <img src="https://www.shutterstock.com/image-vector/vector-cartoon-image-food-combo-260nw-1420305245.jpg" alt="Hangaama Food Logo" className="logoimage" />
                     <p>Hangaama Food</p>
                 </Link>
             </div>
