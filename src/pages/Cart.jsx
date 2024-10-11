@@ -2,10 +2,14 @@ import { useState, useContext, useEffect } from 'react';
 import './Cart.css';
 import { CartContext } from '../CartContext';
 import { PriceContext } from '../PriceContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { RecentPurchasesContext } from '../RecentPurchasesContext'; // Import RecentPurchasesContext
 
 function Cart() {
-    const { cart, setCart } = useContext(CartContext);
+    const { cart, setCart, removeFromCart, clearCart } = useContext(CartContext);
     const { total, setTotal, shippingCharge, setShippingCharge, offer, setOffer, subtotal } = useContext(PriceContext);
+    const { recentPurchases } = useContext(RecentPurchasesContext); // Access recent purchases
 
     const [quantities, setQuantities] = useState(cart.map(() => 1));
     const [couponCode, setCouponCode] = useState("");
@@ -25,7 +29,12 @@ function Cart() {
         }
     };
 
-    // Apply the coupon logic
+    const removeItem = (index) => {
+        removeFromCart(cart[index].name);
+        const updatedQuantities = quantities.filter((_, i) => i !== index);
+        setQuantities(updatedQuantities);
+    };
+
     const applyCoupon = () => {
         if (couponCode === "kashyap") {
             setValidCoupon(true);
@@ -37,7 +46,6 @@ function Cart() {
         }
     };
 
-    // Recalculate totals whenever the cart, quantities, shipping charge, or offer changes
     useEffect(() => {
         let newTotal = 0;
         cart.forEach((item, index) => {
@@ -51,22 +59,21 @@ function Cart() {
     }, [cart, quantities, setTotal, setShippingCharge]);
 
     return (
-        <>
-            <div className="warpeer">
-                <br />
-                <br />
+        <div className="warpeer">
+            <br />
+            <br />
 
-                <h1>Your Cart</h1> <br />
-                <br />
+            <h1>Your Cart</h1>
+            <br />
+            <br />
 
-                {cart.length === 0 ? (
-                    <>
-                        <h3>Item Not Found</h3>
-                        <br />
-                    </>
-                ) : null}
-
-                {cart.map((value, index) => (
+            {cart.length === 0 ? (
+                <>
+                    <h3>Item Not Found</h3>
+                    <br />
+                </>
+            ) : (
+                cart.map((value, index) => (
                     <div className="main2" key={index}>
                         <div className="images">
                             <img src={value.image} alt={value.name} width={"100%"} height={"100%"} />
@@ -82,9 +89,14 @@ function Cart() {
                             <span>{quantities[index]}</span>
                             <button onClick={() => decrement(index)}>-</button>
                         </div>
+                        <button className="Delet-button" onClick={() => removeItem(index)}>
+                            <FontAwesomeIcon className='FontAwesomeIcon' icon={faTrash} />
+                        </button>
                     </div>
-                ))}
+                ))
+            )}
 
+            {cart.length > 0 && (
                 <div className="subTotle">
                     <div className="myTotle">
                         <div className="p">
@@ -106,9 +118,10 @@ function Cart() {
                         {validCoupon ? <p style={{ color: "green" }}>Coupon applied! 25% discount.</p> : null}
                     </div>
                 </div>
-                <br />
-            </div>
-        </>
+            )}
+
+
+        </div>
     );
 }
 

@@ -1,9 +1,16 @@
+// Favorite.js
 import React, { useContext } from 'react';
 import { FavoritesContext } from "../FavoritesContext";
+import { CartContext } from '../CartContext'; // Import CartContext to use addtoCart function
 import './Favorite.css';
 
 function Favorite() {
     const { favorites, removeFromFavorites } = useContext(FavoritesContext);
+    const { addtoCart } = useContext(CartContext); // Access addtoCart from CartContext
+
+    const handleAddToCart = (item) => {
+        addtoCart(item); // Add the item to the cart when the button is clicked
+    };
 
     return (
         <div className="favorites-container">
@@ -18,6 +25,7 @@ function Favorite() {
                             <h2>{item.name}</h2>
                             <p>{item.price}₹</p>
                             <button onClick={() => removeFromFavorites(item.name)}>Remove</button>
+                            <button onClick={() => handleAddToCart(item)}>Add To Cart</button> {/* Add to Cart button */}
                         </div>
                     ))}
                 </div>

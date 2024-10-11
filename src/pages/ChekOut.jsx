@@ -1,13 +1,18 @@
 import { useState, useContext } from 'react';
-import './ChekOut.css';  // Ensure the CSS file is correctly named
+import "./ChekOut.css"
 import { CartContext } from '../CartContext';
-import { useNavigate } from 'react-router-dom';  // Updated to use useNavigate
-import { PriceContext } from '../PriceContext';  // Import PriceContext
-import Swal from 'sweetalert2';  // Import SweetAlert2
+import { useNavigate } from 'react-router-dom';
+import { PriceContext } from '../PriceContext';
+import Swal from 'sweetalert2';
+import { CheckoutContext } from '../ChekOutContext';
+import { RecentPurchasesContext } from '../RecentPurchasesContext';  // Import RecentPurchasesContext
 
 function Checkout() {
-    const { cart, setCart } = useContext(CartContext);  // Access CartContext
-    const { total, shippingCharge, offer, subtotal } = useContext(PriceContext);  // Access PriceContext
+    const { cart, setCart } = useContext(CartContext);
+    const { total, shippingCharge, offer, subtotal } = useContext(PriceContext);
+    const { clearCart } = useContext(CheckoutContext);
+    const { addRecentPurchase } = useContext(RecentPurchasesContext);  // Use RecentPurchasesContext
+
     const [couponCode, setCouponCode] = useState('');
     const [validCoupon, setValidCoupon] = useState(false);
     const [paymentDetails, setPaymentDetails] = useState({
@@ -24,10 +29,9 @@ function Checkout() {
     });
     const [paymentSuccess, setPaymentSuccess] = useState(false);
 
-    const navigate = useNavigate();  // Use useNavigate instead of useHistory
+    const navigate = useNavigate();
 
     const handlePayment = () => {
-        // Validate user and payment form inputs
         if (!userDetails.name || !userDetails.email || !userDetails.phoneNumber || !userDetails.address) {
             Swal.fire({
                 title: 'Oops!',
@@ -48,7 +52,9 @@ function Checkout() {
             return;
         }
 
-        // If payment is successful, show success message with Swal
+        // Add the items in the cart to recent purchases
+        cart.forEach(item => addRecentPurchase(item));
+
         setPaymentSuccess(true);
         Swal.fire({
             title: 'Payment Successful!',
@@ -56,11 +62,11 @@ function Checkout() {
             icon: 'success',
             confirmButtonText: 'Go to Home'
         }).then(() => {
+            clearCart();  // Clear the cart using the CheckoutContext
             navigate('/');  // Redirect to the homepage
         });
     };
 
-    // Calculate total amount to pay
     const totalAmountToPay = (total + shippingCharge - offer).toFixed(2);
 
     return (
@@ -99,7 +105,7 @@ function Checkout() {
                             rows="4"
                         />
                     </div>
-<br />
+
                     <div className="payment-section">
                         <h3>Payment Information</h3>
                         <label>Name on Card</label>
@@ -131,7 +137,6 @@ function Checkout() {
                             onChange={(e) => setPaymentDetails({ ...paymentDetails, cvv: e.target.value })}
                         />
 
-                        {/* Display the total amount to pay in the payment section */}
                         <label>Amount to Pay</label>
                         <input
                             type="text"
@@ -142,7 +147,6 @@ function Checkout() {
 
                         <button type="button" onClick={handlePayment}>Complete Payment</button>
                     </div>
-
                 </form>
 
                 <br /><br />

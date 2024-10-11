@@ -4,33 +4,36 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState(() => {
-        // Retrieve the cart from localStorage on component mount
-        const storedCart = localStorage.getItem('cart');
-        return storedCart ? JSON.parse(storedCart) : [];
+        const savedCart = localStorage.getItem('cart');
+        return savedCart ? JSON.parse(savedCart) : [];
     });
 
-    // Sync the cart with localStorage whenever the cart changes
     useEffect(() => {
-        if (cart.length > 0) {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        } else {
-            localStorage.removeItem('cart');
-        }
+        localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
 
     const addtoCart = (item) => {
-        const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
-        if (existingItemIndex !== -1) {
-            const updatedCart = [...cart];
-            updatedCart[existingItemIndex].quantity += 1;
-            setCart(updatedCart);
-        } else {
-            setCart((prevCart) => [...prevCart, item]);
+        // Check if item is already in the cart
+        const existingItem = cart.find(cartItem => cartItem.name === item.name);
+        if (!existingItem) {
+            setCart((prevCart) => {
+                const updatedCart = [...prevCart, item];
+                return updatedCart;
+            });
         }
     };
 
+    const removeFromCart = (itemName) => {
+        const updatedCart = cart.filter((item) => item.name !== itemName);
+        setCart(updatedCart);
+    };
+
+    const clearCart = () => {
+        setCart([]);  // Clear the cart completely
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addtoCart }}>
+        <CartContext.Provider value={{ cart, setCart, addtoCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );

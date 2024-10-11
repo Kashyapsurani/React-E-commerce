@@ -7,6 +7,8 @@ import ChekOut from './pages/ChekOut';
 import { CartProvider } from './CartContext';
 import { PriceProvider } from './PriceContext';
 import { FavoritesProvider } from './FavoritesContext';  // Import FavoritesProvider
+import { CheckoutProvider } from './ChekOutContext';
+import { RecentPurchasesProvider } from './RecentPurchasesContext';
 import Favorite from './components/Favorite';
 
 const router = createBrowserRouter([
@@ -39,8 +41,12 @@ function App() {
     <CartProvider>
       <PriceProvider>
         <FavoritesProvider> {/* Wrap with FavoritesProvider */}
-          <RouterProvider router={router} />
-        </FavoritesProvider>
+          <CheckoutProvider>
+            <RecentPurchasesProvider>
+              <RouterProvider router={router} />
+            </RecentPurchasesProvider>
+          </CheckoutProvider>
+          </FavoritesProvider>
       </PriceProvider>
     </CartProvider>
   );
