@@ -16,9 +16,9 @@ function Favorite() {
         <div className="favorites-container">
             <h1>My Favorites</h1>
             {favorites.length === 0 ? (
-                <p>No favorites added yet!</p>
+                <p style={{marginTop:"20px"}}>No favorites added yet!</p>
             ) : (
-                <div className="favorites-list">
+                    <div className="favorites-list" style={{ marginTop: "20px" }}>
                     {favorites.map((item, index) => (
                         <div key={index} className="favorite-item">
                             <img src={item.image} alt={item.name} width={"100px"} height={"100px"} />
