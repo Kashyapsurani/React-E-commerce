@@ -23,3 +23,7 @@ body {
     font-family: monospace;
     border-radius: 8px;
 }
+
+a{
+    text-decoration: none;
+}
