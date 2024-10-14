@@ -1,14 +1,16 @@
-import './Footer.css';
+import './Footer.css';  // Import the CSS file for footer styling
 
 function Footer() {
     return (
         <>
-            <div className="footer">
-                <p>Footer © 2024 | All rights reserved.</p>
+            <div className="footer">  {/* Main footer container */}
+                <p>Footer © {new Date().getFullYear()} | All rights reserved.</p>
+
+                {/* Links section for footer navigation */}
                 <div className="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>  {/* Privacy Policy link */}
+                    <a href="#">Terms of Service</a>  {/* Terms of Service link */}
+                    <a href="#">Contact Us</a>  {/* Contact Us link */}
                 </div>
             </div>
         </>
