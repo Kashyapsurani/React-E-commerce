@@ -192,13 +192,7 @@ function Checkout() {
                         cart.map((item, index) => (
                             <div className="cart-item" key={index}>
                                 <div className="item-image">
-                                    <img src={item.image} alt={item.name} width="200px" height="150px" />
-                                </div>
-                                <div className="item-details">
-                                    <h4>{item.name}</h4>
-                                    <p>Price: ₹{item.price}</p>
-                                    <p>Quantity: 1</p> {/* Assuming each item has a quantity of 1 */}
-                                    <p>Total: ₹{item.price}</p>
+                                    <img src={item.image} alt={item.name} width="200px" height="150px" style={{marginTop:'10px'}} />
                                 </div>
                             </div>
                         ))
@@ -212,7 +206,7 @@ function Checkout() {
                             <p className='font'>Total: <b>₹{total.toFixed(2)}</b></p>
                             <p className='font'>Shipping Charge: <b>₹{shippingCharge.toFixed(2)}</b></p>
                             <p className='font'>Discount: <b>₹{offer.toFixed(2)}</b></p>
-                            <p className='font'>Subtotal: <b>₹{storedSubtotal}</b></p>
+                            <p className='font'>Subtotal: <b>₹{storedSubtotal}.00</b></p>
                         </div>
                     </div>
                 </div>
