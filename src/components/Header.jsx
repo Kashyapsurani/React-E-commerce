@@ -26,7 +26,7 @@ function Header() {
                         alt="Hangaama Food Logo"
                         className="logoimage"
                     />
-                    <p>Hangaama Food</p>
+                    <p>Delicias Food</p>
                 </Link>
             </div>
             <nav>

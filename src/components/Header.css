@@ -8,6 +8,7 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     font-family: "Nosifer", sans-serif;
+    height: 85px;
 }
 
 .logo-container a p {
