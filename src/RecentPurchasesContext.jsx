@@ -23,3 +23,6 @@ export const RecentPurchasesProvider = ({ children }) => {
         </RecentPurchasesContext.Provider>
     );
 };
+
+
+// on chick card open page all data. show with routing and lasy loding 

@@ -10,28 +10,33 @@ import { FavoritesProvider } from './FavoritesContext';  // Import FavoritesProv
 import { CheckoutProvider } from './ChekOutContext';  // Import CheckoutProvider to manage checkout state
 import { RecentPurchasesProvider } from './RecentPurchasesContext';  // Import RecentPurchasesProvider to manage recent purchases
 import Favorite from './components/Favorite';  // Import Favorite component to display favorite items
+import ProductDetail from './pages/ProductDetail'; // Import the ProductDetail component
 
-// Define routing for the application using createBrowserRouter
+// Then, modify the router definition to include the new route
 const router = createBrowserRouter([
   {
-    path: '/',  // Root path ('/')
-    element: <Root />,  // Root component for the application
+    path: '/',
+    element: <Root />,
     children: [
       {
-        index: true,  // Default route (Home page)
-        element: <Home />  // Render Home component for the root path
+        index: true,
+        element: <Home />
       },
       {
-        path: "/cart",  // Route for the cart page
-        element: <Cart />  // Render Cart component
+        path: "/cart",
+        element: <Cart />
       },
       {
-        path: "/checkout",  // Route for the checkout page
-        element: <ChekOut />  // Render Checkout component
+        path: "/checkout",
+        element: <ChekOut />
       },
       {
-        path: "/fav",  // Route for the favorites page
-        element: <Favorite />  // Render Favorite component
+        path: "/fav",
+        element: <Favorite />
+      },
+      {
+        path: "/product/:id",  // New route for product details
+        element: <ProductDetail />  // Render ProductDetail component
       },
     ]
   }
@@ -45,7 +50,6 @@ function App() {
         <FavoritesProvider>  {/* Wrap application in FavoritesProvider to manage favorite items globally */}
           <CheckoutProvider>  {/* Wrap application in CheckoutProvider to manage checkout state globally */}
             <RecentPurchasesProvider>  {/* Wrap application in RecentPurchasesProvider to manage recent purchases */}
-              {/* Provide the routing context to the application */}
               <RouterProvider router={router} />  {/* Use the router defined above to handle routes */}
             </RecentPurchasesProvider>
           </CheckoutProvider>

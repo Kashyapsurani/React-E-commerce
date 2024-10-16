@@ -83,118 +83,6 @@
 }
 
 .nav-tab {
-        padding: 10px 20px;
-            text-decoration: none;
-            color: #333;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-}
-
-svg,.ps {
-    margin-right: 20px;
-    margin-top: 3px;
-    font-size: 20px;
-
-}
-
-.nav-tab:hover {
-    color: #b790ff;
-}
-
-.logoimage {
-    width: 100px;
-}
-
-/* Responsive Styling */
-/* General Header Styles */
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-family: "Nosifer", sans-serif;
-}
-
-.logo-container a p {
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #111;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-/* Menu Button (Hamburger) */
-.menu-btn {
-    display: none;
-    cursor: pointer;
-    z-index: 2;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-
-.menu {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.3s;
-}
-
-/* Close Button Styles (hidden on larger screens) */
-.close-btn,
-#menuToggle,
-.hidden {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #333;
-    z-index: 2;
-    transition: color 0.3s ease;
-}
-
-.close-btn:hover {
-    color: #b790ff;
-    /* Light purple hover effect */
-}
-
-/* Navigation Styles */
-.nav-container {
-    display: flex;
-    align-items: center;
-}
-
-.nav-tabs {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-tab {
     padding: 10px 20px;
     text-decoration: none;
     color: #333;
@@ -222,214 +110,150 @@ svg,
 }
 
 /* Responsive Styling */
+/* General Header Styles */
 @media (max-width: 1200px) {
-    .menu-btn {
-        display: block;
+    .nav-wrapper {
+        padding: 15px;
+        /* Reduced padding */
     }
 
     .logoimage {
-        width: 50px;
+        width: 80px;
+        /* Smaller logo size for medium screens */
     }
 
     .logo-container a {
         font-size: 1.2rem;
+        /* Slightly smaller for medium screens */
+    }
+
+    .nav-tab {
+        padding: 10px;
+        /* Reduced padding for nav tabs */
+        font-size: 1rem;
+        /* Adjust for readability */
+    }
+
+    .menu-btn {
+        display: block;
+        /* Show hamburger menu button */
     }
 
     /* Hide the navigation tabs by default */
     .nav-container {
         display: none;
+        /* Hide by default */
         position: fixed;
+        /* Fixed position */
         top: 0;
+        /* Position at the top */
         right: 0;
+        /* Position to the right */
         width: 250px;
+        /* Set width */
         height: 100vh;
+        /* Full viewport height */
         background-color: #fff;
+        /* Background color */
         box-shadow: -1px 0 5px rgba(0, 0, 0, 0.3);
+        /* Shadow */
         flex-direction: column;
+        /* Column layout */
         padding-top: 80px;
+        /* Spacing at the top */
         z-index: 1;
+        /* Layering */
     }
 
     /* Show close button and navigation tabs when menu is open */
     .nav-container.open {
         display: flex;
+        /* Show nav */
     }
 
     .close-btn {
         display: block;
+        /* Show close button */
     }
 
     /* Dropdown styles for the nav-tabs in mobile view */
     .nav-tabs {
         flex-direction: column;
+        /* Column layout */
         align-items: flex-start;
+        /* Align start */
     }
 
     .nav-tab {
         padding: 15px;
+        /* Padding for tabs */
         width: 100%;
+        /* Full width for tabs */
         border-bottom: 1px solid #eee;
+        /* Bottom border */
     }
 
     .nav-tab:hover {
         background-color: #f5f5f5;
+        /* Hover effect */
     }
 
     /* Menu Slide-In Animation */
     .nav-container {
         animation: slide-in 0.3s ease;
+        /* Animation */
     }
 
     @keyframes slide-in {
         0% {
             transform: translateX(100%);
+            /* Start off-screen */
         }
 
         100% {
             transform: translateX(0);
+            /* End position */
         }
     }
 }
 
 @media (max-width: 1000px) {
-
-    /* Show the hamburger menu button on small screens */
-    .menu-btn {
-        display: block;
-    }
-
-    .logoimage {
-        width: 50px;
-    }
-
-    .logo-container a {
-        font-size: 1.2rem;
-    }
-
-    /* Hide the navigation tabs by default */
-    .nav-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background-color: #fff;
-        box-shadow: -1px 0 5px rgba(0, 0, 0, 0.3);
-        flex-direction: column;
-        padding-top: 80px;
-        z-index: 1;
-    }
-
-    /* Show close button and navigation tabs when menu is open */
-    .nav-container.open {
-        display: flex;
-    }
-
-    .close-btn {
-        display: block;
-    }
-
-    /* Dropdown styles for the nav-tabs in mobile view */
     .nav-tabs {
-        flex-direction: column;
-        align-items: flex-start;
+        display: none;
+        /* Hide tabs by default */
+    }
+
+    .nav-container.open .nav-tabs {
+        display: flex;
+        /* Show when open */
     }
 
     .nav-tab {
-        padding: 15px;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-    }
-
-    .nav-tab:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Menu Slide-In Animation */
-    .nav-container {
-        animation: slide-in 0.3s ease;
-    }
-
-    @keyframes slide-in {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
+        font-size: 0.9rem;
+        /* Smaller tab text */
     }
 }
 
+/* Additional styles for screens smaller than 800px */
 @media (max-width: 800px) {
-
-    /* Show the hamburger menu button on small screens */
-    .menu-btn {
-        display: block;
+    .nav-wrapper {
+        padding: 10px;
+        /* Further reduced padding */
     }
 
     .logoimage {
-        width: 50px;
+        width: 60px;
+        /* Smaller logo size */
     }
 
     .logo-container a {
-        font-size: 1.2rem;
-    }
-
-    /* Hide the navigation tabs by default */
-    .nav-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background-color: #fff;
-        box-shadow: -1px 0 5px rgba(0, 0, 0, 0.3);
-        flex-direction: column;
-        padding-top: 80px;
-        z-index: 1;
-    }
-
-    /* Show close button and navigation tabs when menu is open */
-    .nav-container.open {
-        display: flex;
-    }
-
-    .close-btn {
-        display: block;
-    }
-
-    /* Dropdown styles for the nav-tabs in mobile view */
-    .nav-tabs {
-        flex-direction: column;
-        align-items: flex-start;
+        font-size: 1rem;
+        /* Adjust font size */
     }
 
     .nav-tab {
-        padding: 15px;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-    }
-
-    .nav-tab:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Menu Slide-In Animation */
-    .nav-container {
-        animation: slide-in 0.3s ease;
-    }
-
-    @keyframes slide-in {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
+        padding: 10px;
+        /* Adjust tab padding */
     }
 }
 
@@ -437,57 +261,46 @@ svg,
 @media (max-width: 500px) {
     .logoimage {
         width: 40px;
+        /* Small logo */
     }
 
     .logo-container a {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        /* Smaller text */
     }
 
     .nav-tab {
-        padding: 12px;
-        font-size: 1rem;
+        padding: 8px;
+        /* Less padding */
+        font-size: 0.9rem;
+        /* Smaller tab text */
     }
 
     .nav-tab:hover {
         background-color: #f5f5f5;
+        /* Hover effect */
     }
 }
+@media (max-width: 450px) {
+    .logoimage {
+        width: 40px;
+        /* Small logo */
+    }
 
-/* Ensure font sizes scale well */
-@media (max-width: 1200px) {
-    .logo-container a {
-        font-size: 1.2rem;
-        /* Slightly smaller for tablets */
+    .logo-container a p {
+        font-size: 0.6rem;
+        /* Smaller text */
     }
 
     .nav-tab {
-        font-size: 1rem;
-        /* Adjust for readability on smaller devices */
-    }
-}
-
-@media (max-width: 1000px) {
-    .logo-container a {
-        font-size: 1.1rem;
-        /* Further decrease for medium-sized tablets */
-    }
-}
-
-@media (max-width: 800px) {
-    .logo-container a {
-        font-size: 1rem;
-        /* Reduce for small tablets */
-    }
-}
-
-@media (max-width: 500px) {
-    .logo-container a {
+        padding: 8px;
+        /* Less padding */
         font-size: 0.9rem;
-        /* Make text smaller for extra small screens */
+        /* Smaller tab text */
     }
 
-    .nav-tab {
-        font-size: 0.9rem;
-        /* Slightly smaller tab text */
+    .nav-tab:hover {
+        background-color: #f5f5f5;
+        /* Hover effect */
     }
-}           
+}

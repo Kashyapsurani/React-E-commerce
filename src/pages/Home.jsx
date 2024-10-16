@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Card from '../components/Card';
 import './Home.css';
 
+
 // Make sure images are correctly imported or accessible
 import dhosaImage from '../assets/food-trail-coimbatore-microsite1-1024x576.jpg'; // Correct import path
 
@@ -32,11 +33,11 @@ function Home() {
     <>
       <div className="warpeer">
         <div className="banner-section">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
-            alt="Food Banner"
-            className="banner"
-          />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+                alt="Food Banner"
+                className="banner"
+              />
         </div>
 
         {/* Map through cards array to dynamically render multiple Card components */}
@@ -44,6 +45,7 @@ function Home() {
           {cards.map((card) => (
             <Card
               key={card.id} // Use unique id as key
+              id={card.id}   // Pass the id to Card component
               image={card.image}
               name={card.name}
               price={card.price}
