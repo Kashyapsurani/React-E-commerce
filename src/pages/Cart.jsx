@@ -61,7 +61,7 @@ function Cart() {
         setTotal(newTotal);
 
         const totalItems = quantities.reduce((sum, qty) => sum + qty, 0);
-        const newShippingCharge = totalItems <= 2 ? 20 : 0; // 20₹ shipping charge if 2 or fewer items
+        const newShippingCharge = totalItems <= 10 ? 100 : 0; // 20₹ shipping charge if 2 or fewer items
         setShippingCharge(newShippingCharge);
 
         // Calculate subtotal considering shipping and offer

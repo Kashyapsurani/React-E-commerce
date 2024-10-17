@@ -66,7 +66,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" // Banner image
               alt="Food Banner"
               className="banner"
             />
@@ -75,7 +75,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src={dhosaImage} // Banner image
               alt="Food Banner"
               className="banner"
             />

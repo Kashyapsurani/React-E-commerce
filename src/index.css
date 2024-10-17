@@ -5,9 +5,8 @@
 }
 
 body {
-    padding: 20px;
     margin: 0;
-    background-color: #eee;
+    background-color: #fefcfc;
 }
 
 .warpeer {
@@ -22,6 +21,7 @@ body {
     flex-wrap: wrap;
     font-family: monospace;
     border-radius: 8px;
+    margin: 10px 0px;
 }
 
 a{

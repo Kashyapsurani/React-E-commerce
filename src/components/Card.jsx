@@ -18,21 +18,26 @@ function Card({ id, image, name, price }) {  // Add id as a prop
 
     return (
         <div className="mains">
+
             <div className="img">
                 <div className="image">
-                    <Link to={`/product/${id}`}>  {/* Wrap image and button in a Link for navigation */}
+                    <Link to={`/product/${id}`}> {/* Wrap image and button in a Link for navigation */}
                         <img src={image} alt={name} width={"250px"} height={"250px"} />
                     </Link>
                     <button className="favorite-btn" onClick={handleFavoriteClick}>❤️</button>
                 </div>
             </div>
             <div className="data">
-                <div className="h1">
-                    <h1>{name}</h1>
-                </div>
-                <div className="price">
-                    <p>{price}₹</p>
-                </div>
+                <Link to={`/product/${id}`}> {/* Wrap image and button in a Link for navigation */}
+
+                    <div className="h1">
+                        <h1>{name}</h1>
+                    </div>
+                    <div className="price">
+                        <p>{price}₹</p>
+                    </div>
+                </Link>
+
                 <div className="add-to-cart">
                     <button onClick={handleClick}>Add To Cart</button>
                 </div>

@@ -184,20 +184,7 @@ function Checkout() {
                     </div>
                 </form>
 
-                <div className="cart-summary-section">
-                    <h3>Order Summary</h3>
-                    {cart.length === 0 ? (
-                        <p>No items in the cart.</p>
-                    ) : (
-                        cart.map((item, index) => (
-                            <div className="cart-item" key={index}>
-                                <div className="item-image">
-                                    <img src={item.image} alt={item.name} width="200px" height="150px" style={{marginTop:'10px'}} />
-                                </div>
-                            </div>
-                        ))
-                    )}
-                </div>
+                
 
                 <br /><br />
                 <div className="SubTotle">
