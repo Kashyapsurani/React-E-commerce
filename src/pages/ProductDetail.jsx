@@ -40,6 +40,20 @@ In popular tradition outside of Southern India, the origin of the dosa is linked
 
 The dosa arrived in Mumbai with the opening of Udupi restaurants in the 1930s.[6] After India's independence in 1947, South Indian cuisine became gradually popular in North India. In New Delhi, the Madras Hotel in Connaught Place became one of the first restaurants to serve South Indian cuisine.[7][8]`
         },
+        {
+            id: 4,
+            image: 'https://www.pitco.com/wp-content/uploads/2023/11/Pitco-A-Brief-History-of-Fries-header.png',
+            name: 'Fries',
+            price: 300,
+            description: `Golden and crispy, fries are a popular side dish or snack made from thinly sliced and deep-fried potatoes. They are typically seasoned with salt and served alongside burgers, sandwiches, or as a standalone treat. Originating from Belgium or France, fries have gained global fame, especially in fast-food culture. Their simple yet satisfying flavor makes them a universally loved comfort food.`
+        },
+        {
+            id: 5,
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRj4fbDzlSwNqWoBrAIR5tG2DH7S2u4I9qTg&s',
+            name: 'Noodles',
+            price: 190,
+            description: `Noodles: Noodles are a versatile and widely enjoyed dish that originated in Asia. Made from unleavened dough, which is rolled flat and cut into strips, noodles can be served in various forms—fried, boiled, or served in broth. Whether paired with vegetables, meat, or seafood, noodles are a quick and flavorful meal enjoyed across cultures. Popular variations include stir-fried noodles, noodle soups, and instant noodles, catering to both casual meals and gourmet preparations.`
+        },
     ]);
 
 

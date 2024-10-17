@@ -37,6 +37,20 @@ export default function App() {
       name: 'Dhosa',
       price: 120,
     },
+    {
+      id: 4,
+      image: 'https://www.pitco.com/wp-content/uploads/2023/11/Pitco-A-Brief-History-of-Fries-header.png',
+      name: 'Fries',
+      price: 300,
+    },
+    {
+      id: 5,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRj4fbDzlSwNqWoBrAIR5tG2DH7S2u4I9qTg&s',
+      name: 'Noodles',
+      price: 190,
+    },
+  
+    
   ]);
 
   return (
