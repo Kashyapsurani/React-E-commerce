@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';  // Import Link for navigation
+import { Link } from 'react-router-dom';
 import './Card.css';
 import { CartContext } from "../CartContext";
 import { FavoritesContext } from "../FavoritesContext";
 
-function Card({ id, image, name, price }) {  // Add id as a prop
+function Card({ id, image, name, price }) {  
     const { addtoCart } = useContext(CartContext);
     const { addToFavorites } = useContext(FavoritesContext);
 
@@ -21,14 +21,14 @@ function Card({ id, image, name, price }) {  // Add id as a prop
 
             <div className="img">
                 <div className="image">
-                    <Link to={`/product/${id}`}> {/* Wrap image and button in a Link for navigation */}
+                    <Link to={`/product/${id}`}> 
                         <img src={image} alt={name} width={"250px"} height={"250px"} />
                     </Link>
                     <button className="favorite-btn" onClick={handleFavoriteClick}>❤️</button>
                 </div>
             </div>
             <div className="data">
-                <Link to={`/product/${id}`}> {/* Wrap image and button in a Link for navigation */}
+                <Link to={`/product/${id}`}>
 
                     <div className="h1">
                         <h1>{name}</h1>

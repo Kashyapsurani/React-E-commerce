@@ -1,4 +1,3 @@
-/* General Header Styles */
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -29,7 +28,6 @@
     margin-left: 20px;
 }
 
-/* Menu Button (Hamburger) */
 .menu-btn {
     display: none;
     cursor: pointer;
@@ -48,7 +46,6 @@
     transition: 0.3s;
 }
 
-/* Close Button Styles (hidden on larger screens) */
 .close-btn,
 #menuToggle,
 .hidden {
@@ -67,10 +64,8 @@
 
 .close-btn:hover {
     color: #b790ff;
-    /* Light purple hover effect */
 }
 
-/* Navigation Styles */
 .nav-container {
     display: flex;
     align-items: center;
@@ -110,110 +105,76 @@ svg,
     width: 75px;
 }
 
-/* Responsive Styling */
-/* General Header Styles */
 @media (max-width: 1200px) {
     .nav-wrapper {
         padding: 15px;
-        /* Reduced padding */
     }
 
     .logoimage {
         width: 80px;
-        /* Smaller logo size for medium screens */
     }
 
     .logo-container a {
         font-size: 1.2rem;
-        /* Slightly smaller for medium screens */
     }
 
     .nav-tab {
         padding: 10px;
-        /* Reduced padding for nav tabs */
         font-size: 1rem;
-        /* Adjust for readability */
     }
 
     .menu-btn {
         display: block;
-        /* Show hamburger menu button */
     }
 
-    /* Hide the navigation tabs by default */
     .nav-container {
         display: none;
-        /* Hide by default */
         position: fixed;
-        /* Fixed position */
         top: 0;
-        /* Position at the top */
         right: 0;
-        /* Position to the right */
         width: 250px;
-        /* Set width */
         height: 100vh;
-        /* Full viewport height */
         background-color: #fff;
-        /* Background color */
         box-shadow: -1px 0 5px rgba(0, 0, 0, 0.3);
-        /* Shadow */
         flex-direction: column;
-        /* Column layout */
         padding-top: 80px;
-        /* Spacing at the top */
         z-index: 1;
-        /* Layering */
     }
 
-    /* Show close button and navigation tabs when menu is open */
     .nav-container.open {
         display: flex;
-        /* Show nav */
     }
 
     .close-btn {
         display: block;
-        /* Show close button */
     }
 
-    /* Dropdown styles for the nav-tabs in mobile view */
     .nav-tabs {
         flex-direction: column;
-        /* Column layout */
         align-items: flex-start;
-        /* Align start */
     }
 
     .nav-tab {
         padding: 15px;
-        /* Padding for tabs */
         width: 100%;
-        /* Full width for tabs */
         border-bottom: 1px solid #eee;
-        /* Bottom border */
     }
 
     .nav-tab:hover {
         background-color: #f5f5f5;
-        /* Hover effect */
     }
 
-    /* Menu Slide-In Animation */
     .nav-container {
         animation: slide-in 0.3s ease;
-        /* Animation */
     }
 
     @keyframes slide-in {
         0% {
             transform: translateX(100%);
-            /* Start off-screen */
         }
 
         100% {
             transform: translateX(0);
-            /* End position */
         }
     }
 }
@@ -221,87 +182,69 @@ svg,
 @media (max-width: 1000px) {
     .nav-tabs {
         display: none;
-        /* Hide tabs by default */
     }
 
     .nav-container.open .nav-tabs {
         display: flex;
-        /* Show when open */
     }
 
     .nav-tab {
         font-size: 0.9rem;
-        /* Smaller tab text */
     }
 }
 
-/* Additional styles for screens smaller than 800px */
 @media (max-width: 800px) {
     .nav-wrapper {
         padding: 10px;
-        /* Further reduced padding */
     }
 
     .logoimage {
         width: 60px;
-        /* Smaller logo size */
     }
 
     .logo-container a {
         font-size: 1rem;
-        /* Adjust font size */
     }
 
     .nav-tab {
         padding: 10px;
-        /* Adjust tab padding */
     }
 }
 
-/* Responsive for screens smaller than 500px (extra small) */
 @media (max-width: 500px) {
     .logoimage {
         width: 40px;
-        /* Small logo */
     }
 
     .logo-container a {
         font-size: 0.9rem;
-        /* Smaller text */
     }
 
     .nav-tab {
         padding: 8px;
-        /* Less padding */
         font-size: 0.9rem;
-        /* Smaller tab text */
     }
 
     .nav-tab:hover {
         background-color: #f5f5f5;
-        /* Hover effect */
     }
 }
+
 @media (max-width: 450px) {
     .logoimage {
         width: 40px;
-        /* Small logo */
     }
 
     .logo-container a p {
         font-size: 0.6rem;
-        /* Smaller text */
     }
 
     .nav-tab {
         padding: 8px;
-        /* Less padding */
         font-size: 0.9rem;
-        /* Smaller tab text */
     }
 
     .nav-tab:hover {
         background-color: #f5f5f5;
-        /* Hover effect */
     }
 }

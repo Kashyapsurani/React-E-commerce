@@ -1,14 +1,14 @@
-// src/pages/ProductDetail.js
+
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import dhosaImage from '../assets/food-trail-coimbatore-microsite1-1024x576.jpg'; // Ensure you import the image correctly
+import dhosaImage from '../assets/food-trail-coimbatore-microsite1-1024x576.jpg'; 
 import "./ProductDetail.css";
 
 function ProductDetail() {
-    const { id } = useParams();  // Get the product ID from the URL parameters
-    const productId = parseInt(id, 10); // Convert the id to an integer
+    const { id } = useParams();  
+    const productId = parseInt(id, 10); 
 
-    const [cards] = useState([  // Use useState but no need to set state again
+    const [cards] = useState([  
         {
             id: 1,
             image: 'https://recipesblob.oetker.in/assets/d8a4b00c292a43adbb9f96798e028f01/1272x764/pizza-pollo-arrostojpg.jpg',
@@ -31,7 +31,7 @@ In 2017, the world pizza market was US$128 billion, and in the U.S. it was $44 b
         },
         {
             id: 3,
-            image: dhosaImage, // Ensure you import the correct image path
+            image: dhosaImage, 
             name: 'Dhosa',
             price: 120,
             description: `The dosa originated in South India, but its precise geographical origins are unknown. According to food historian K. T. Achaya, references in the Sangam literature suggest that dosa was already in use in the ancient Tamil country around the 1st century CE.[1] However, according to historian P. Thankappan Nair, dosa originated in the town of Udupi in present-day Karnataka.[2] Achaya states that the earliest written mention of dosa appears in the 8th-century literature of present-day Tamil Nadu, while the earliest mention of dosa in Kannada literature appears a century later.[3]
@@ -42,31 +42,30 @@ The dosa arrived in Mumbai with the opening of Udupi restaurants in the 1930s.[6
         },
     ]);
 
-    // Find the product based on the ID from the URL
+
     const product = cards.find(card => card.id === productId);
 
-    // Render loading state or product details
+    
     if (!product) {
-        return <div className="product-not-found">Product not found.</div>;  // Handle case when the product is not found
+        return <div className="product-not-found">Product not found.</div>;  
     }
 
-    // Function to handle adding the product to the cart
+
     const handleAddToCart = () => {
         alert(`${product.name} has been added to your cart!`);
-        // Here you can add logic to actually add the product to a cart
-        // For example, update cart state or send data to a cart context
+
     };
 
     return (
-        <div className="product-detail-container"> {/* Centering container */}
+        <div className="product-detail-container"> 
             <div className="product-detail">
                 <div className="product-image">
                     <img src={product.image} alt={product.name} width="300" height="300" />
                 </div>
                 <div className="product-info">
-                    <h1 className="product-name">{product.name}</h1>  {/* Display product name */}
-                    <p className="product-price">Price: <span>{product.price}₹</span></p>  {/* Display product price */}
-                    <p className="product-description">{product.description}</p>  {/* Display product description */}
+                    <h1 className="product-name">{product.name}</h1>  
+                    <p className="product-price">Price: <span>{product.price}₹</span></p>  
+                    <p className="product-description">{product.description}</p> 
                     <div className="parent ">
                         <button className="add-to-carts" onClick={handleAddToCart}>
                         Add to Cart

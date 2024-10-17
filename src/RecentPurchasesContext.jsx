@@ -4,7 +4,6 @@ export const RecentPurchasesContext = createContext();
 
 export const RecentPurchasesProvider = ({ children }) => {
     const [recentPurchases, setRecentPurchases] = useState(() => {
-        // Load previous purchases from localStorage, if any
         const storedPurchases = localStorage.getItem('recentPurchases');
         return storedPurchases ? JSON.parse(storedPurchases) : [];
     });
@@ -13,7 +12,6 @@ export const RecentPurchasesProvider = ({ children }) => {
         const updatedPurchases = [...recentPurchases, item];
         setRecentPurchases(updatedPurchases);
 
-        // Store recent purchases in localStorage
         localStorage.setItem('recentPurchases', JSON.stringify(updatedPurchases));
     };
 
@@ -24,5 +22,3 @@ export const RecentPurchasesProvider = ({ children }) => {
     );
 };
 
-
-// on chick card open page all data. show with routing and lasy loding 

@@ -1,4 +1,3 @@
-// FavoritesContext.js
 import { createContext, useState, useEffect } from 'react';
 
 export const FavoritesContext = createContext();
@@ -10,7 +9,6 @@ export const FavoritesProvider = ({ children }) => {
     });
 
     const addToFavorites = (item) => {
-        // Check if item is already in favorites
         const existingFavorite = favorites.find(fav => fav.name === item.name);
         if (!existingFavorite) {
             setFavorites((prevFavorites) => {

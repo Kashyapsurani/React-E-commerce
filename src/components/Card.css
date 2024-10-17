@@ -1,4 +1,3 @@
-/* Card.css */
 .mains {
     width: 350px;
     height: auto;
@@ -9,7 +8,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 50px;
     cursor: pointer;
-    /* Change cursor to pointer for clickable cards */
     object-fit: cover;
 }
 
@@ -18,7 +16,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Image container and image hover effect */
 .img {
     display: flex;
     align-items: center;
@@ -30,7 +27,6 @@
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease;
-    /* Smooth background transition */
 }
 
 .img img {
@@ -42,10 +38,8 @@
 
 .img:hover img {
     transform: scale(1.05);
-    /* Slightly enlarge image on hover */
 }
 
-/* Favorite button */
 .favorite-btn {
     position: absolute;
     top: -1.5px;
@@ -68,7 +62,6 @@
 .favorite-btn:hover {
     background-color: white;
     color: rgba(138, 103, 247, 1);
-    /* Change text color on hover */
 }
 
 .favorite-btn svg {
@@ -77,12 +70,9 @@
 
 .favorite-btn:hover svg {
     transform: scale(1.1);
-    /* Slightly enlarge icon on hover */
 }
 
-/* Data section styles */
 .data {
-    padding: 20px;
     padding: 20px;
     text-align: left;
     display: flex;
@@ -94,7 +84,6 @@
 .h1 h1 {
     font-size: 1.8rem;
     color: #333;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     transition: color 0.3s ease;
@@ -102,7 +91,6 @@
 
 .h1 h1:hover {
     color: #8a67f7;
-    /* Light purple hover effect */
 }
 
 .price {
@@ -112,18 +100,16 @@
     text-align: center;
 }
 
-/* Add to cart button */
 .add-to-cart {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-        width: 100%;
+    width: 100%;
 }
 
 .add-to-cart button {
     width: 100%;
-
     padding: 15px;
     background-color: #8a67f7;
     color: #fff;
@@ -149,22 +135,17 @@
 
 .add-to-cart button:active {
     transform: scale(0.98);
-    /* Slightly shrink the button on click */
 }
 
-/* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
     .mains {
         width: 90%;
-        /* Make the card responsive on smaller screens */
     }
 
-    /* Adjust image height for smaller screens */
     .img {
         height: 150px;
     }
 
-    /* Make the favorite button smaller on mobile */
     .favorite-btn {
         width: 40px;
         height: 40px;
@@ -172,17 +153,14 @@
         left: 0px;
     }
 
-    /* Reduce card title font size on mobile */
     .h1 h1 {
         font-size: 1.5rem;
     }
 
-    /* Adjust price font size */
     .price {
         font-size: 1.2rem;
     }
 
-    /* Make add to cart button padding smaller */
     .add-to-cart button {
         padding: 12px;
     }

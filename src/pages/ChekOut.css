@@ -1,4 +1,4 @@
-/* Main container */
+
 .checkout-container {
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ form {
     flex-wrap: wrap;
 }
 
-/* Section styles for user and payment information */
+
 .payment-section,
 .user-details-section {
     background-color: #f9f9f9;
@@ -47,7 +47,7 @@ h3 {
     color: #555;
 }
 
-/* Input field styles */
+
 label {
     font-size: 16px;
     margin-bottom: 10px;
@@ -93,13 +93,13 @@ textarea:focus {
     background-color: #fff;
 }
 
-/* Readonly input styles */
+
 .readonly-input {
     background-color: #e9ecef;
     cursor: not-allowed;
 }
 
-/* Button styles */
+
 button {
     width: 100%;
     padding: 15px;
@@ -121,7 +121,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Totals section */
+
 .SubTotle {
     width: 100%;
     color: #000;
@@ -164,9 +164,7 @@ button:disabled {
     font-weight: 600;
 }
 
-/* Responsive Styles */
 
-/* Tablet view and below */
 @media (max-width: 768px) {
     .checkout-container {
         width: 95%;
@@ -178,8 +176,6 @@ button:disabled {
         width: 100%;
         padding: 20px;
     }
-
-    /* Reduce font size for smaller screens */
     h2 {
         font-size: 24px;
     }
@@ -205,7 +201,6 @@ button:disabled {
         }
 }
 
-/* Mobile view and below */
 @media (max-width: 480px) {
     .checkout-container {
         width: 100%;
@@ -218,7 +213,6 @@ button:disabled {
         padding: 15px;
     }
 
-    /* Reduce font size for smaller screens */
     h2 {
         font-size: 22px;
     }

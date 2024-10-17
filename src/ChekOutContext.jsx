@@ -6,10 +6,8 @@ export const CheckoutProvider = ({ children }) => {
     const [isCheckedOut, setIsCheckedOut] = useState(false);
 
     const clearCart = () => {
-        // Clear the cart from state
         setIsCheckedOut(true);
 
-        // Clear the cart from localStorage
         localStorage.removeItem('cart');
     };
 

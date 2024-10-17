@@ -4,15 +4,15 @@ import { CartContext } from '../CartContext';
 import { PriceContext } from '../PriceContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { RecentPurchasesContext } from '../RecentPurchasesContext'; // Import RecentPurchasesContext
+import { RecentPurchasesContext } from '../RecentPurchasesContext'; 
 
 function Cart() {
-    // Accessing context for cart, pricing, and recent purchases
+
     const { cart, removeFromCart, setCart, clearCart } = useContext(CartContext);
     const { total, setTotal, shippingCharge, setShippingCharge, offer, setOffer, subtotal, setSubtotal } = useContext(PriceContext);
     const { recentPurchases } = useContext(RecentPurchasesContext);
 
-    // State to track item quantities, coupon code, and coupon validity
+
     const [quantities, setQuantities] = useState(cart.map(() => 1));
     const [couponCode, setCouponCode] = useState("");
     const [validCoupon, setValidCoupon] = useState(false);
@@ -40,11 +40,11 @@ function Cart() {
         setQuantities(updatedQuantities);
     };
 
-    // Apply a coupon if it matches the valid code
+
     const applyCoupon = () => {
         if (couponCode === "kashyap") {
             setValidCoupon(true);
-            const discount = total * 0.25; // 25% discount
+            const discount = total * 0.25; 
             setOffer(discount);
         } else {
             setValidCoupon(false);
@@ -52,7 +52,7 @@ function Cart() {
         }
     };
 
-    // Calculate totals and shipping charges based on cart items and quantities
+
     useEffect(() => {
         let newTotal = 0;
         cart.forEach((item, index) => {
@@ -61,10 +61,8 @@ function Cart() {
         setTotal(newTotal);
 
         const totalItems = quantities.reduce((sum, qty) => sum + qty, 0);
-        const newShippingCharge = totalItems <= 10 ? 100 : 0; // 20₹ shipping charge if 2 or fewer items
+        const newShippingCharge = totalItems <= 10 ? 100 : 0; 
         setShippingCharge(newShippingCharge);
-
-        // Calculate subtotal considering shipping and offer
         setSubtotal(newTotal + newShippingCharge - offer);
     }, [cart, quantities, setTotal, setShippingCharge, setSubtotal, offer]);
 

@@ -1,4 +1,3 @@
-/* Universal box-sizing for better control over layout */
 *,
 *::before,
 *::after {
@@ -87,7 +86,7 @@ body {
     box-shadow: 0 6px 12px rgba(138, 103, 247, 0.4);
 }
 
-/* Coupon Section */
+
 .coupon-section {
     display: flex;
     justify-content: space-between;
@@ -138,7 +137,7 @@ body {
     width: 100px;
 }
 
-/* Subtotal Section */
+
 .subTotle {
     width: 100%;
     color: rgb(0, 0, 0);
@@ -184,6 +183,7 @@ body {
 }
 
 /* Responsive Design */
+
 @media (max-width: 1024px) {
     .main2 {
         flex-direction: row;

@@ -9,8 +9,6 @@
     height: 750px;
     border-radius: 10px;
 }
-
-/* Content Section */
 .content-section {
     text-align: center;
     background-color: #2b2b2e;
@@ -25,61 +23,40 @@
     margin-bottom: 10px;
 }
 
-/* Description Text */
 .description {
     font-size: 1rem;
-    /* Size for descriptions */
     color: #b0b0b5;
-    /* Grayish white for subtlety */
     margin-bottom: 20px;
-    /* Space below description */
 }
 
-/* Call-to-Action Button */
 .cta-button {
     padding: 10px 20px;
-    /* Button padding */
     background-color: #b790ff;
-    /* Light purple */
     color: white;
-    /* White text for contrast */
     border: none;
-    /* No border */
     border-radius: 5px;
-    /* Rounded corners */
     cursor: pointer;
-    /* Pointer cursor for interaction */
     font-size: 1rem;
-    /* Button font size */
     transition: background-color 0.3s ease;
-    /* Smooth transition */
 }
 
-/* Button Hover Effect */
 .cta-button:hover {
     background-color: #9f6cff;
-    /* Darker purple on hover */
+    
 }
 
-/* Responsive Design Adjustments */
-
-/* Small mobile (up to 400px) */
 @media (max-width: 400px) {
     .heading {
         font-size: 1.6rem;
-        /* Smaller heading for mobile */
     }
 
     .description {
         font-size: 0.9rem;
-        /* Smaller description for mobile */
     }
 
     .cta-button {
         padding: 6px 12px;
-        /* Smaller button for mobile */
         font-size: 0.8rem;
-        /* Slightly smaller text */
     }
 }
 
@@ -87,19 +64,15 @@
 @media (max-width: 600px) {
     .heading {
         font-size: 1.8rem;
-        /* Smaller heading for mobile */
     }
 
     .description {
         font-size: 1rem;
-        /* Smaller description for mobile */
     }
 
     .cta-button {
         padding: 8px 16px;
-        /* Smaller button for mobile */
         font-size: 0.9rem;
-        /* Slightly smaller text */
     }
 }
 
@@ -107,49 +80,38 @@
 @media (max-width: 900px) {
     .content-section {
         padding: 15px;
-        /* Slightly smaller padding for tablet */
     }
 
     .heading {
         font-size: 2rem;
-        /* Heading remains the same for tablets */
     }
 
     .description {
         font-size: 1.1rem;
-        /* Slightly smaller description for tablets */
     }
 
     .cta-button {
         padding: 10px 18px;
-        /* Slightly smaller padding */
         font-size: 1rem;
-        /* Same font size for tablet */
     }
 }
 
-/* Larger Screens (Desktop and beyond) */
 @media (min-width: 1200px) {
     .content-section {
         padding: 30px;
-        /* Larger padding for bigger screens */
     }
 
     .heading {
         font-size: 2.5rem;
-        /* Larger heading for bigger screens */
     }
 
     .description {
         font-size: 1.3rem;
-        /* Larger description text for bigger screens */
     }
 
     .cta-button {
         padding: 12px 24px;
-        /* Larger button for bigger screens */
         font-size: 1.2rem;
-        /* Slightly larger text */
     }
 }
 
@@ -165,7 +127,7 @@
 }
 .swiper {
     width: 100%;
-    height: 600px;
+    height: 700px;
     margin: 10px 0px;
 }
 
@@ -174,7 +136,6 @@
     font-size: 18px;
     background: #fff;
 
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +144,6 @@
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 789px;
     object-fit: cover;
 }

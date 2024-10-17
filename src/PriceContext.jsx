@@ -8,12 +8,10 @@ export const PriceProvider = ({ children }) => {
     const [offer, setOffer] = useState(0);
     const [subtotal, setSubtotal] = useState(0);
 
-    // A function to calculate the subtotal
     const calculateSubtotal = () => {
         setSubtotal(total + shippingCharge - offer);
     };
 
-    // Recalculate subtotal whenever total, shippingCharge, or offer changes
     useEffect(() => {
         calculateSubtotal();
     }, [total, shippingCharge, offer]);

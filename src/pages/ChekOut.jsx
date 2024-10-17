@@ -47,12 +47,12 @@ function Checkout() {
     }, [setCart]);
 
     useEffect(() => {
-        // Calculate and save the total amount to pay
+
         const calculatedAmountToPay = (total + shippingCharge - offer).toFixed(2);
         setTotalAmountToPay(calculatedAmountToPay);
         localStorage.setItem('totalAmountToPay', calculatedAmountToPay);
 
-        // Save the subtotal to localStorage
+
         localStorage.setItem('subtotal', subtotal.toFixed(2));
     }, [total, shippingCharge, offer, subtotal]);
 
@@ -77,7 +77,7 @@ function Checkout() {
             return;
         }
 
-        // Add the items in the cart to recent purchases
+
         cart.forEach(item => addRecentPurchase(item));
 
         Swal.fire({
@@ -96,7 +96,6 @@ function Checkout() {
             <div className="checkout-container">
                 <h2>Checkout</h2>
 
-                {/* Shipping Information Section */}
                 <form>
                     <div className="user-details-section">
                         <h3>Shipping Information</h3>
@@ -107,7 +106,7 @@ function Checkout() {
                             value={firstName}
                             onChange={(e) => {
                                 setFirstName(e.target.value);
-                                localStorage.setItem('firstName', e.target.value); // Save to localStorage
+                                localStorage.setItem('firstName', e.target.value); 
                             }}
                         />
 
@@ -118,7 +117,7 @@ function Checkout() {
                             value={lastName}
                             onChange={(e) => {
                                 setLastName(e.target.value);
-                                localStorage.setItem('lastName', e.target.value); // Save to localStorage
+                                localStorage.setItem('lastName', e.target.value); 
                             }}
                         />
 
@@ -129,7 +128,7 @@ function Checkout() {
                             value={pincode}
                             onChange={(e) => {
                                 setPincode(e.target.value);
-                                localStorage.setItem('pincode', e.target.value); // Save to localStorage
+                                localStorage.setItem('pincode', e.target.value); 
                             }}
                         />
 
@@ -139,13 +138,13 @@ function Checkout() {
                             value={address}
                             onChange={(e) => {
                                 setAddress(e.target.value);
-                                localStorage.setItem('address', e.target.value); // Save to localStorage
+                                localStorage.setItem('address', e.target.value); 
                             }}
                             rows="4"
                         />
                     </div>
 
-                    {/* Payment Information Section */}
+
                     <div className="payment-section">
                         <h3>Bank Details</h3>
                         <label>Card Number</label>

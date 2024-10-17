@@ -3,22 +3,18 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
-    // State to manage the open/closed status of the menu
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Toggle menu open/closed
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    // Close the menu
     const closeMenu = () => {
         setMenuOpen(false);
     };
 
     return (
         <div className="nav-wrapper">
-            {/* Logo container linking to the home page */}
             <div className="logo-container">
                 <Link to="/" className="logo">
                     <img
@@ -30,7 +26,6 @@ function Header() {
                 </Link>
             </div>
             <nav>
-                {/* Hamburger menu button for mobile view */}
                 <button
                     className="menu-btn"
                     aria-label={menuOpen ? "Close Menu" : "Open Menu"}
@@ -41,9 +36,7 @@ function Header() {
                     <div className="menu"></div>
                 </button>
 
-                {/* Navigation container */}
                 <div className={`nav-container ${menuOpen ? 'open' : ''}`}>
-                    {/* Close button */}
                     <button className="close-btn" onClick={closeMenu} aria-label="Close Menu">
                         &times;
                     </button>

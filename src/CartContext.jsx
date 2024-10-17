@@ -13,7 +13,6 @@ export const CartProvider = ({ children }) => {
     }, [cart]);
 
     const addtoCart = (item) => {
-        // Check if item is already in the cart
         const existingItem = cart.find(cartItem => cartItem.name === item.name);
         if (!existingItem) {
             setCart((prevCart) => {
@@ -29,7 +28,7 @@ export const CartProvider = ({ children }) => {
     };
 
     const clearCart = () => {
-        setCart([]);  // Clear the cart completely
+        setCart([]);  
     };
 
     return (
