@@ -1,23 +1,17 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from "../components/Card"
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import './Home.css';
 
 
-// Make sure images are correctly imported or accessible
-import dhosaImage from '../assets/food-trail-coimbatore-microsite1-1024x576.jpg'; // Correct import path
+import dhosaImage from '../assets/food-trail-coimbatore-microsite1-1024x576.jpg';
 
 export default function App() {
 
-  // Array of card data for multiple items
   const [cards, setCards] = useState([
     {
       id: 1,
@@ -62,11 +56,8 @@ export default function App() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
