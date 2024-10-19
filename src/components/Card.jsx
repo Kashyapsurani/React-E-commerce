@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 import { CartContext } from "../CartContext";
 import { FavoritesContext } from "../FavoritesContext";
-import Swal from 'sweetalert2'; // Import SweetAlert2
+import Swal from 'sweetalert2'; 
 
 function Card({ id, image, name, price }) {
     const { addtoCart } = useContext(CartContext);
@@ -12,7 +12,6 @@ function Card({ id, image, name, price }) {
     const handleClick = () => {
         addtoCart({ image, name, price });
 
-        // Show SweetAlert on Add to Cart
         Swal.fire({
             icon: 'success',
             title: 'Added to Cart!',
@@ -25,7 +24,6 @@ function Card({ id, image, name, price }) {
     const handleFavoriteClick = () => {
         addToFavorites({ image, name, price });
 
-        // Show SweetAlert on Add to Favorites
         Swal.fire({
             icon: 'success',
             title: 'Added to Favorites!',
