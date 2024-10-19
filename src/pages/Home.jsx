@@ -33,7 +33,7 @@ export default function App() {
     },
     {
       id: 3,
-      image: dhosaImage, // Correct image path or imported file
+      image: dhosaImage,
       name: 'Dhosa',
       price: 120,
     },
