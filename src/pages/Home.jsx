@@ -63,7 +63,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -71,7 +71,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -80,7 +80,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -89,7 +89,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -98,7 +98,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -107,7 +107,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -116,7 +116,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -125,7 +125,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -134,7 +134,7 @@ export default function App() {
         <SwiperSlide>
           <div className="banner-section">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" // Banner image
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" 
               alt="Food Banner"
               className="banner"
             />
@@ -145,12 +145,12 @@ export default function App() {
       <div className="warpeer">
 
 
-        {/* Map through cards array to dynamically render multiple Card components */}
+
         <div className="warper">
           {cards.map((card) => (
             <Card
-              key={card.id} // Use unique id as key
-              id={card.id}   // Pass the id to Card component
+              key={card.id} 
+              id={card.id}   
               image={card.image}
               name={card.name}
               price={card.price}
@@ -161,4 +161,3 @@ export default function App() {
     </>
   );
 }
-
